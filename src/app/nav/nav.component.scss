@@ -6,25 +6,9 @@
 }
 
 .imgnavtext {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 
-.nav-link:hover {
-  color: #0f0 !important;
-}
-
-ul.nav .nav-item a:hover {
-  color: #616161 !important;
-  opacity: 1;
-  background-color: rgba(235, 140, 0, 0.8) !important;
-}
-
-ul.nav .nav-item .active a {
-  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
-  border: 2px black;
-  opacity: 1;
-  background-color: rgba(235, 140, 0, 0.5) !important;
-}
 .tab-content {
   border: 1px solid #dee2e6;
   border-top: transparent;
