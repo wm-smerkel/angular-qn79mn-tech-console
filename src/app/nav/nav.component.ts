@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AppBootstrapModule } from '../app-bootstrap/app-bootstrap.module';
+import { Component, OnInit, Input, TemplateRef } from '@angular/core';
+
 import '../../assets/js/sidebars.js';
 
 declare var bootstrap: any;
@@ -9,6 +9,7 @@ declare var bootstrap: any;
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
+  @Input() templateRef: TemplateRef<any>;
   constructor() {}
 
   ngOnInit(): void {

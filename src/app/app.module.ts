@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { DeviceComponent } from './device/device.component';
 import { NetworkConfigComponent } from './network-config/network-config.component';
-import { NaviLinkComponent } from './navi-link/navi-link.component';
+import { AppsComponent } from './apps/apps.component';
 
 @NgModule({
   imports: [
@@ -15,15 +15,21 @@ import { NaviLinkComponent } from './navi-link/navi-link.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: DeviceComponent },
+      { path: '', redirectTo: 'device', pathMatch: 'full' },
+    ]),
+    RouterModule.forChild([
       { path: 'network', component: NetworkConfigComponent },
+      { path: 'apps', component: AppsComponent },
+      { path: 'device', component: DeviceComponent },
     ]),
   ],
+
   declarations: [
     AppComponent,
     DeviceComponent,
     NavComponent,
     NaviLinkComponent,
+    AppsComponent,
   ],
   bootstrap: [AppComponent],
 })

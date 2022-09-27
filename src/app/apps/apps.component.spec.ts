@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NaviLinkComponent } from './navi-link.component';
+import { AppsComponent } from './apps.component';
 
-describe('NaviLinkComponent', () => {
-  let component: NaviLinkComponent;
-  let fixture: ComponentFixture<NaviLinkComponent>;
+describe('AppsComponent', () => {
+  let component: AppsComponent;
+  let fixture: ComponentFixture<AppsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NaviLinkComponent ]
+      declarations: [ AppsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NaviLinkComponent);
+    fixture = TestBed.createComponent(AppsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
