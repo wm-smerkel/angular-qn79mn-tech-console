@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, TemplateRef } from '@angular/core';
 
-import '../../assets/js/sidebars.js';
-
 declare var bootstrap: any;
 @Component({
   selector: 'app-nav',
@@ -17,7 +15,10 @@ export class NavComponent implements OnInit {
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl);
+      return new bootstrap.Tooltip(tooltipTriggerEl, {
+        container: 'body',
+        trigger: 'hover ',
+      });
     });
   }
 }

@@ -8,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { DeviceComponent } from './device/device.component';
 import { NetworkConfigComponent } from './network-config/network-config.component';
 import { AppsComponent } from './apps/apps.component';
+import { DataComponent } from './data/data.component';
+import { CloudComponent } from './cloud/cloud.component';
 
 @NgModule({
   imports: [
@@ -21,6 +23,9 @@ import { AppsComponent } from './apps/apps.component';
       { path: 'network', component: NetworkConfigComponent },
       { path: 'apps', component: AppsComponent },
       { path: 'device', component: DeviceComponent },
+      { path: 'network', component: NetworkConfigComponent },
+      { path: 'data', component: DataComponent },
+      { path: 'cloud', component: CloudComponent },
     ]),
   ],
 
@@ -28,8 +33,10 @@ import { AppsComponent } from './apps/apps.component';
     AppComponent,
     DeviceComponent,
     NavComponent,
-    NaviLinkComponent,
     AppsComponent,
+    NetworkConfigComponent,
+    DataComponent,
+    CloudComponent,
   ],
   bootstrap: [AppComponent],
 })
