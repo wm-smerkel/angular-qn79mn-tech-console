@@ -1,7 +1,7 @@
 <nav
   class="
+    static-top
     border-bottom border-2
-    sticky-top
     navbar navbar-expand navbar-light
     bg-light
   "
@@ -42,107 +42,3 @@
     </div>
   </div>
 </nav>
-
-<div class="container-fluid p-0 d-flex">
-  <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 5rem;">
-    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-      <li class="nav-item">
-        <a
-          routerLink="/device"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          class="nav-link py-3 border-bottom rounded-0"
-          title="Device"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-          trigger='hover'
-        >
-          <img
-            class="img-fluid"
-            src="/assets/images/round-router.svg"
-            width="32"
-            height="32"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/data"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          class="nav-link py-3 border-bottom rounded-0"
-          title="Data"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-        >
-          <img
-            class="img-fluid"
-            src="/assets/images/database.svg"
-            width="32"
-            height="32"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/network"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          class="nav-link py-3 border-bottom rounded-0"
-          title="Network"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-        >
-          <img
-            class="img-fluid"
-            src="/assets/images/network-2.svg"
-            width="32"
-            height="32"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/cloud"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          class="nav-link py-3 border-bottom rounded-0"
-          title="Cloud"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-        >
-          <img
-            class="img-fluid"
-            src="/assets/images/cloud.svg"
-            width="32"
-            height="32"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/apps"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          class="nav-link py-3 border-bottom rounded-0"
-          title="Apps"
-          data-bs-toggle="tooltip"
-          data-bs-placement="right"
-        >
-          <img
-            class="img-fluid"
-            src="/assets/images/app-folder.svg"
-            width="32"
-            height="32"
-          />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="border border-2 flex-fill bg-light">
-    <ng-container *ngTemplateOutlet="templateRef"></ng-container>
-  </div>
-</div>
-<footer>
-  <hr />
-</footer>

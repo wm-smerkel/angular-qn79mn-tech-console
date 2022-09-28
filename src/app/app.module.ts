@@ -10,16 +10,17 @@ import { NetworkConfigComponent } from './network-config/network-config.componen
 import { AppsComponent } from './apps/apps.component';
 import { DataComponent } from './data/data.component';
 import { CloudComponent } from './cloud/cloud.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { TooltipModule } from 'node_modules/ngx-bootstrap/tooltip';
 @NgModule({
   imports: [
     AppBootstrapModule,
+    TooltipModule.forRoot(),
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'device', pathMatch: 'full' },
-    ]),
-    RouterModule.forChild([
       { path: 'network', component: NetworkConfigComponent },
       { path: 'apps', component: AppsComponent },
       { path: 'device', component: DeviceComponent },
@@ -27,6 +28,7 @@ import { CloudComponent } from './cloud/cloud.component';
       { path: 'data', component: DataComponent },
       { path: 'cloud', component: CloudComponent },
     ]),
+    BrowserAnimationsModule,
   ],
 
   declarations: [
