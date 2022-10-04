@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cloud',
   templateUrl: './cloud.component.html',
-  styleUrls: ['./cloud.component.scss']
+  styleUrls: ['./cloud.component.scss'],
+
 })
 export class CloudComponent implements OnInit {
 
@@ -12,4 +13,8 @@ export class CloudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  value="";
+  clearValue() {
+    this.value="";
+  }
 }

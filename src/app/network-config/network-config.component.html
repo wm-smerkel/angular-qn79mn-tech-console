@@ -1,254 +1,240 @@
-<div class="container">
+
   <div class="row">
-    <div class="col">
+    <div class="col-md row mx-auto px-md-auto px-5 mb-4">
       <div class="input-group mb-3">
-        <strong>Eth0</strong>
+        <strong>Ethernet 0</strong>
+        <br />
+      </div>
+
+
+      <div class="container text-center">
+        <form [formGroup]="Eth0Form" (ngSubmit)="onSubmitEth0(Eth0Form)">
+        <div class="form-check form-switch text-start">
+          <label class="form-check-label" for="eth0_dhcp">DHCP</label>
+          <input class="form-check-input" type="checkbox" role="switch" id="eth0_dhcp">
+
+        </div>
+
+        <div class="row mx-auto mb-2">
+        <span class="input-group-text col col-md-4 rounded-0">IP</span>
+        <input
+          type="text"
+          class="form-control col-8 col-md rounded-0"
+          placeholder="192.168.x.x"
+          id="eth0_ip_address"
+        />
+        </div>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0" >Subnet</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder="255.255.x.x"
+            id="eth0_subnet"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Gateway</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="eth0_gateway"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2 ">
+          <span class="input-group-text col col-md-4 rounded-0">Pref. DNS</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="eth0_dns1"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Alt. DNS</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="eth0_dns2"
+          />
+        </div>
+        <div class="row mx-auto d-flex justify-content-end">
+        <input type="submit" class="btn btn-primary col-3"/>
+      </div>
+  </form>
+    </div>
+    
+    </div>
+    <div class="col-md row mx-auto px-md-auto px-5 mb-4">
+      <div class="input-group mb-3">
+        <strong>Ethernet 1</strong>
         <br />
       </div>
 
       <div class="container text-center">
-        <div class="input-group mb-2">
-          <br />
-          <span class="input-group-text" id="basic-addon1">Static IP</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="192.168.x.x"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
+        <div class="form-check form-switch text-start">
+          <label class="form-check-label" for="eth1_dhcp">DHCP</label>
+          <input class="form-check-input" type="checkbox" role="switch" id="eth1_dhcp">
+
         </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Subnet </span>
+        <div class="row mx-auto mb-2">
+        <span class="input-group-text col col-md-4 rounded-0">IP Address</span>
+        <input
+          type="text"
+          class="form-control col-8 col-md rounded-0"
+          placeholder="192.168.x.x"
+          id="eth1_ip_address"
+        />
+        </div>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0" >Subnet Mask</span>
           <input
             type="text"
-            class="form-control"
+            class="form-control col-8 col-md rounded-0"
             placeholder="255.255.x.x"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="eth1_subnet"
           />
         </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Mac Address</span>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Gateway</span>
           <input
             type="text"
-            class="form-control"
+            class="form-control col-8 col-md rounded-0"
             placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="eth1_gateway"
           />
         </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Static Router</span>
+        <div class="row mx-auto mb-2 ">
+          <span class="input-group-text col col-md-4 rounded-0">Pref. DNS</span>
           <input
             type="text"
-            class="form-control"
+            class="form-control col-8 col-md rounded-0"
             placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="eth1_dns1"
           />
         </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Static Domain</span>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Alt. DNS</span>
           <input
             type="text"
-            class="form-control"
-            placeholder="8.8.8.8"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Gateway</span>
-          <input
-            type="text"
-            class="form-control"
+            class="form-control col-8 col-md rounded-0"
             placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="input-group mb-3">
-        <strong>Eth1</strong>
-        <br />
-      </div>
-
-      <div class="container text-center">
-        <div class="input-group mb-2">
-          <br />
-          <span class="input-group-text" id="basic-addon1">Static IP</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="192.168.x.x"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
+            id="eth1_dns2"
           />
         </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Subnet </span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="255.255.x.x"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
 
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Mac Address</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Static Router</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Static Domain</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="8.8.8.8"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-        </div>
-
-        <div class="input-group mb-2">
-          <span class="input-group-text" id="basic-addon1">Gateway</span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder=""
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-          <br />
-        </div>
-      </div>
-    </div>
-
-    <br />
-    <br />
-    <br />
-
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="input-group mb-3">
-            <br />
-            <strong>Wifi</strong>
-            <br />
-          </div>
-
-          <div class="container text-center">
-            <div class="input-group mb-2">
-              <br />
-              <span class="input-group-text" id="basic-addon1">Wifi IP</span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-            <div class="input-group mb-2">
-              <br />
-              <span class="input-group-text" id="basic-addon1">SSID</span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-
-            <div class="input-group mb-2">
-              <span class="input-group-text" id="basic-addon1">Password </span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="*******"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="input-group mb-3">
-            <strong>Cellular</strong>
-            <br />
-          </div>
-
-          <div class="container text-center">
-            <div class="input-group mb-2">
-              <br />
-              <span class="input-group-text" id="basic-addon1">Carrier</span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-
-            <div class="input-group mb-2">
-              <span class="input-group-text" id="basic-addon1">ID </span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-            <div class="input-group mb-2">
-              <span class="input-group-text" id="basic-addon1"> </span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder=""
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-dark me-md-2" type="button">Save</button>
-        <button class="btn btn-dark" type="button">Close</button>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-md row mx-auto px-md-auto px-5 mb-4">
+      <div class="input-group mb-3">
+        <strong>Wifi</strong>
+        <br />
+      </div>
+
+      <div class="container text-center">
+        <div class="row mx-auto">
+        <div class="form-check form-switch text-start col-5">
+          <label class="form-check-label" for="wlan0_enabled">Enabled</label>
+          <input class="form-check-input" type="checkbox" role="switch" id="wlan0_enabled">
+        </div>
+        <div class="form-check form-switch text-start col-5">
+          <label class="form-check-label" for="wlan0_dhcp">DHCP</label>
+          <input class="form-check-input" type="checkbox" role="switch" id="wlan0_dhcp">
+        </div>
+      </div>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">IP Address</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder="192.168.x.x"
+            id="wlan0_ip_address"
+          />
+          </div>
+        <div class="row mx-auto mb-2">
+        <span class="input-group-text col col-md-4 rounded-0">IP Address</span>
+        <input
+          type="text"
+          class="form-control col-8 col-md rounded-0"
+          placeholder="192.168.x.x"
+          id="wlan0_ip_address"
+        />
+        </div>
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0" >Subnet Mask</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder="255.255.x.x"
+            id="wlan0_subnet"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Gateway</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="wlan0_gateway"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2 ">
+          <span class="input-group-text col col-md-4 rounded-0">Pref. DNS</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="wlan0_dns1"
+          />
+        </div>
+
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">Alt. DNS</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="wlan0_dns2"
+          />
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col-md row mx-auto px-md-auto px-5 mb-4">
+      <div class="input-group mb-3">
+        <strong>Cellular</strong>
+        <br />
+      </div>
+
+      <div class="container text-center">
+
+        <div class="row mx-auto mb-2">
+          <span class="input-group-text col col-md-4 rounded-0">APN</span>
+          <input
+            type="text"
+            class="form-control col-8 col-md rounded-0"
+            placeholder=""
+            id="cellular_apn"
+          />
+        </div>
+        
+      </div>
+    </div>
+  </div>

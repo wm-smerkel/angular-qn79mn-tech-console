@@ -26,5 +26,8 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+  },
+  "watchOptions": {
+    "excludeFiles": ["**/node_modules"]
   }
 }

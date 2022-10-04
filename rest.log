@@ -1,0 +1,2 @@
+2022-10-03 18:45:51,336 [INFO] rest.py/<module>:32 >> tech-console REST started; version = 1.0.0
+2022-10-03 18:45:51,343 [DEBUG] selector_events.py/__init__:59 >> Using selector: EpollSelector
